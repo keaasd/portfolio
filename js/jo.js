@@ -10,15 +10,15 @@ tabButtons.forEach((tabButton, index) => {
     tabButton.addEventListener('click', (event) => {
         const dataValue = tabButton.dataset.tabsHandler
 
-        tabDescribtions.forEach((descr) => {
-            if (index === dataValue) {
+        tabDescribtions.forEach((descr, indexDescr) => {
+            if (index === indexDescr) {
                 descr.classList.remove('hidden')
             } else {descr.classList.add('hidden')
                 }
         })
         // добавим картинки
-        tabImages.forEach((image) => {
-            if (image.dataset.tabsField === dataValue) {
+        tabImages.forEach((image, indexImage) => {
+            if (index === indexImage) {
                 image.classList.remove('hidden')
             } else { 
                 image.classList.add('hidden')
@@ -36,5 +36,4 @@ tabButtons.forEach((tabButton, index) => {
     
 })
 
-
-// 07:50 1 день
+data-tabs-handler="interior"
